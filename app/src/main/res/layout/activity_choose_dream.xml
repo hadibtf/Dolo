@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/page3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/blue_gradient"
@@ -19,7 +20,7 @@
             android:layout_weight="3"
             android:orientation="vertical">
 
-            <LinearLayout
+            <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="4" />
@@ -29,18 +30,16 @@
                 android:layout_height="0dp"
                 android:layout_weight="6">
 
-                <LinearLayout
+                <View
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight=".5">
-
-                </LinearLayout>
+                    android:layout_weight=".5" />
 
                 <LinearLayout
                     android:id="@+id/backBt"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1.5">
+                    android:layout_weight="1.2">
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -49,23 +48,12 @@
 
                 </LinearLayout>
 
-                <LinearLayout
+                <View
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="8">
-
-                </LinearLayout>
-
+                    android:layout_weight="9.5" />
 
             </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.4"
-            android:orientation="vertical">
 
         </LinearLayout>
 
@@ -74,12 +62,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="8.2">
+        android:layout_weight="8.7">
 
-        <LinearLayout
+        <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".1" />
+            android:layout_weight=".05" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -87,7 +75,7 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <LinearLayout
+            <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight=".5" />
@@ -97,20 +85,147 @@
                 android:layout_height="0dp"
                 android:layout_weight="1">
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="8.5"
                     android:background="@drawable/circular_white_stroke_shape">
 
-                </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/searchEdtHint"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                <LinearLayout
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1" />
+
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="2"
+                                    android:src="@drawable/search_white" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="2"
+                                    android:autoSizeTextType="uniform"
+                                    android:fontFamily="@font/avenir_demi_bold"
+                                    android:gravity="left|center"
+                                    android:text="search"
+                                    android:textColor="@color/white" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".05" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:focusableInTouchMode="true"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+
+                            <EditText
+                                android:id="@+id/searchEdt"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:background="@color/noColor"
+                                android:fontFamily="@font/avenir_demi_bold"
+                                android:inputType="text"
+                                android:singleLine="true"
+                                android:textColor="@color/white" />
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".02" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight=".5">
 
-                </LinearLayout>
+                </View>
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -138,7 +253,7 @@
 
             </LinearLayout>
 
-            <LinearLayout
+            <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight=".5" />
@@ -154,17 +269,57 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:background="@drawable/white_shape_radius"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="9">
+                        android:layout_weight="9.2"
+                        android:background="@drawable/white_shape_radius"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight=".2" />
+
+                            <TextView
+                                android:fontFamily="@font/avenir_medium"
+                                android:text="recent dreams"
+                                android:gravity="center"
+                                android:autoSizeTextType="uniform"
+                                android:textColor="@color/darkBlue"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight=".2" />
+
+
+                        </LinearLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recentDreamsRv"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="9" />
 
                     </LinearLayout>
 
-                    <LinearLayout
+                    <View
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"/>
+                        android:layout_weight=".8" />
 
                 </LinearLayout>
 
@@ -173,24 +328,115 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <LinearLayout
-                        android:background="@drawable/white_shape_radius"
+                    <View
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="8">
+                        android:layout_weight="8" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2.5"
+                        android:background="@drawable/green_shape_bt"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight=".9" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1.1">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="4">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="2"
+                                            android:autoSizeTextType="uniform"
+                                            android:fontFamily="@font/avenir_demi_bold"
+                                            android:gravity="center"
+                                            android:text="choose"
+                                            android:textColor="@color/white" />
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight=".2" />
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight=".4">
+
+                                        <View
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight=".1" />
+
+
+                                        <ImageView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:src="@drawable/choose_arrow" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:background="@drawable/ready_to_wish"
+                    <View
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="2"/>
-
-                    <LinearLayout
-                        android:layout_weight=".5"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"></LinearLayout>
+                        android:layout_weight=".2" />
 
                 </LinearLayout>
 
@@ -198,15 +444,16 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".1" />
+            android:layout_weight=".05" />
 
     </LinearLayout>
 
-    <LinearLayout
+    <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight=".8" />
+        android:layout_weight=".5" />
+
 </LinearLayout>

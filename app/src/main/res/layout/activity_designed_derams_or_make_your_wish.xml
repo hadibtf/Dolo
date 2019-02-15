@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/page2"
     tools:context=".DesignedDeramsOrMakeYourWishActivity">
 
     <LinearLayout
@@ -31,7 +32,7 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1.5">
+                    android:layout_weight=".5">
 
                 </LinearLayout>
 
@@ -51,7 +52,7 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="7">
+                    android:layout_weight="8">
 
                 </LinearLayout>
 
