@@ -9,9 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Test"></activity>
-        <activity android:name=".ChooseDreamActivity"></activity>
-        <activity android:name=".DesignedDeramsOrMakeYourWishActivity"></activity>
+        <activity android:name=".DescribeWishActivity"></activity>
+        <activity android:name=".ChoosingOloActivity" />
+        <activity android:name=".EnterOloCodeActivity" />
+        <activity android:name=".SearchingOloActivity" />
+        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".DreamActivity" />
+        <activity android:name=".SearchResultActivity" />
+        <activity android:name=".FiltersActivity" />
+        <activity android:name=".Test" />
+        <activity android:name=".ChooseDreamActivity" />
+        <activity android:name=".DesignedDeramsOrMakeYourWishActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
