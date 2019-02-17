@@ -14,19 +14,22 @@
         <activity android:name=".EnterOloCodeActivity" />
         <activity android:name=".SearchingOloActivity" />
         <activity android:name=".RegistrationActivity" />
-        <activity android:name=".DreamActivity" />
-        <activity android:name=".SearchResultActivity" />
-        <activity android:name=".FiltersActivity" />
-        <activity android:name=".Test" />
-        <activity android:name=".ChooseDreamActivity" />
-        <activity android:name=".DesignedDeramsOrMakeYourWishActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".DreamDescriptionActivity" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <activity android:name=".SearchResultActivity">
+
+        </activity>
+        <activity android:name=".FiltersActivity" />
+        <activity android:name=".ChooseDreamActivity" />
+        <activity android:name=".DesignedDeramsOrMakeYourWishActivity" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

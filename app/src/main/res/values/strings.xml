@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Dreamolo</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu
+        ligula eget tortor condimentum luctus aliquam nec nulla. Morbi placerat tellus in elit
+        elementum, id vulputate risus sollicitudin. Pellentesque mattis euismod velit, et laoreet
+        quam faucibus in. Nulla pulvinar mi velit. Vivamus tempor felis augue, ac eleifend lectus
+        elementum a. Aenean aliquet nunc sapien, non mollis neque maximus vel. Ut at tincidunt ante.
+        Fusce venenatis finibus risus quis mollis. Quisque libero magna, cursus et sagittis non, iaculis
+        </string>
 </resources>

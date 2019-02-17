@@ -39,7 +39,7 @@ class RecentRecyclerViewAdapter(
 
     private fun setLayoutHeightWidth(assistant: Assistant, holder: MyViewHolder) {
 //        assistant.setViewWidthByWidth(holder.ivRecentDreams.recentDreams, 85.0, 100.0)
-        assistant.setViewHeightByHeight(holder.ivRecentDreams.recentDreams, 18.0, 100.0)
+        assistant.setViewHeightByHeight(holder.ivRecentDreams.recentDreams, 15.0, 100.0)
     }
 
     class MyViewHolder(val ivRecentDreams: LinearLayout) : RecyclerView.ViewHolder(ivRecentDreams)

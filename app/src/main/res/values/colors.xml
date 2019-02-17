@@ -26,6 +26,7 @@
     <color name="transparentGray">#6ba6a6a6</color>
     <color name="shadowColor">#dad8d8</color>
     <color name="black">#000</color>
+    <color name="blackV2">#2A2A2A</color>
     <color name="white">#fff</color>
 
     <color name="ripple_material_dark1">#33ffffff</color>
