@@ -12,13 +12,13 @@
         <activity android:name=".DescribeWishActivity"></activity>
         <activity android:name=".ChoosingOloActivity" />
         <activity android:name=".EnterOloCodeActivity" />
-        <activity android:name=".SearchingOloActivity" />
-        <activity android:name=".RegistrationActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".SearchingOloActivity" >             <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity android:name=".RegistrationActivity" >
         </activity>
         <activity android:name=".DreamDescriptionActivity">
 
