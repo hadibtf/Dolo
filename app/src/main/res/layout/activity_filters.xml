@@ -2,8 +2,31 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/testttt1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".FiltersActivity">
 
+
+    <com.android.dreamolo.DreamProgressBarHorizontal
+        android:id="@+id/seekbar"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:endLineColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:progress="40"
+        app:progressTextColor="#ffffff"
+        app:progressTextSize="18sp"
+        app:progress_backgroundColor="#DADADA"
+        app:radius="35dp"
+        app:text="time"
+        app:textColor="#FFFFFF"
+        app:textFont="avenir_demi_bold.ttf"
+        app:textSize="25sp" />
 </android.support.constraint.ConstraintLayout>

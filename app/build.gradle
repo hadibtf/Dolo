@@ -46,4 +46,6 @@ dependencies {
 
     //Verification code edit text
     implementation 'com.justkiddingbaby:vercodeedittext:1.0.5'
+
+    implementation 'com.jakewharton.timber:timber:4.7.1'
 }
