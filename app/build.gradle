@@ -8,7 +8,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.android.dreamolo"
-        minSdkVersion 17
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -37,8 +37,11 @@ dependencies {
     //KAndroid
     implementation 'com.pawegio.kandroid:kandroid:0.8.8@aar'
 
+    /**
+     * third party libraries
+     */
 
-    //third party libraries
+    //Round Corner Layout
     implementation 'com.skyline.widget:round-corner-layout:1.0.1'
 
     //expanding layout
@@ -47,5 +50,7 @@ dependencies {
     //Verification code edit text
     implementation 'com.justkiddingbaby:vercodeedittext:1.0.5'
 
-    implementation 'com.jakewharton.timber:timber:4.7.1'
+    //RatingBar
+    implementation 'me.zhanghai.android.materialratingbar:library:1.3.2'
+
 }

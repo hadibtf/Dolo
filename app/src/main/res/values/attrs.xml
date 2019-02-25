@@ -10,7 +10,10 @@
         <attr name="progress" format="float" />
         <attr name="maxProgress" format="float" />
         <attr name="endLineColor" format="color" />
-        <attr name="progressTextColor" format="color" />
+        <attr name="progressText" format="string" />
+        <attr name="progressTextColor" format="string" />
         <attr name="progressTextSize" format="dimension" />
+        <attr name="gradientStartColor" format="string" />
+        <attr name="gradientEndColor" format="string" />
     </declare-styleable>
 </resources>

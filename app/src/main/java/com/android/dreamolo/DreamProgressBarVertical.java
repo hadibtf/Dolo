@@ -4,15 +4,20 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.*;
+import android.os.Build;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 
-public class DreamProgressBarHorizontal extends View {
+public class DreamProgressBarVertical extends View {
     private OnProgressChangeListener onProgressChangeListener;
 
+
+    private float circleCenterX;
+    private float circleCenterY;
     private float radius;
     private int backgroundColor;
     private String text;
@@ -28,22 +33,26 @@ public class DreamProgressBarHorizontal extends View {
     private String progresText;
     private int progressTextColor;
     private float progressTextSize;
-    private String gradientStartColor;
-    private String gradientEndColor;
 
 
-    public DreamProgressBarHorizontal(Context context) {
+    public DreamProgressBarVertical(Context context) {
         super(context);
         init(null);
     }
 
-    public DreamProgressBarHorizontal(Context context, @Nullable AttributeSet attrs) {
+    public DreamProgressBarVertical(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init(attrs);
     }
 
-    public DreamProgressBarHorizontal(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public DreamProgressBarVertical(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init(attrs);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    public DreamProgressBarVertical(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
         init(attrs);
     }
 
@@ -63,12 +72,11 @@ public class DreamProgressBarHorizontal extends View {
         progress = ta.getFloat(R.styleable.DreamProgressBarHorozontal_progress, 0);
         maxProgress = ta.getFloat(R.styleable.DreamProgressBarHorozontal_maxProgress, 100);
         endLineColor = ta.getColor(R.styleable.DreamProgressBarHorozontal_endLineColor, 0);
-        progresText = ta.getString(R.styleable.DreamProgressBarHorozontal_progressText);
         progressTextColor = ta.getColor(R.styleable.DreamProgressBarHorozontal_progressTextColor, 0);
         progressTextSize = ta.getDimension(R.styleable.DreamProgressBarHorozontal_progressTextSize, 20);
-        gradientStartColor = ta.getString(R.styleable.DreamProgressBarHorozontal_gradientStartColor);
-        gradientEndColor = ta.getString(R.styleable.DreamProgressBarHorozontal_gradientEndColor);
 
+
+//        setOnTouchListener(this);
     }
 
 
@@ -76,77 +84,15 @@ public class DreamProgressBarHorizontal extends View {
         this.onProgressChangeListener = onProgressChangeListener;
     }
 
-    @Override
-    public void setBackgroundColor(int backgroundColor) {
-        this.backgroundColor = backgroundColor;
-    }
-
-    public void setRadius(float radius) {
-        this.radius = radius;
-        invalidate();
-    }
-
     public void setText(String text) {
         this.text = text;
         invalidate();
     }
 
-    public void setTextColor(int textColor) {
-        this.textColor = textColor;
-        invalidate();
-    }
-
-    public void setTextSize(float textSize) {
-        this.textSize = textSize;
-        invalidate();
-    }
-
-    public void setTextFontName(String textFontName) {
-        this.textFontName = textFontName;
-        invalidate();
-    }
-
-    public void setProgress(float progress) {
-        this.progress = progress;
-        if (onProgressChangeListener != null) {
-            onProgressChangeListener.onProgressChange((int) progress);
-        }
-    }
-
-    public void setMaxProgress(float maxProgress) {
-        this.maxProgress = maxProgress;
-        invalidate();
-    }
-
-    public void setEndLineColor(int endLineColor) {
-        this.endLineColor = endLineColor;
-        invalidate();
-    }
-
     public void setProgresText(String progresText) {
         this.progresText = progresText;
-        invalidate();
     }
 
-    public void setProgressTextColor(int progressTextColor) {
-        this.progressTextColor = progressTextColor;
-        invalidate();
-    }
-
-    public void setProgressTextSize(float progressTextSize) {
-        this.progressTextSize = progressTextSize;
-        invalidate();
-    }
-
-    public void setGradientEndColor(String gradientEndColor) {
-        this.gradientEndColor = gradientEndColor;
-        invalidate();
-    }
-
-    public void setGradientStartColor(String gradientStartColor) {
-        this.gradientStartColor = gradientStartColor;
-        invalidate();
-    }
 
     public String getProgresText() {
         return progresText;
@@ -154,6 +100,13 @@ public class DreamProgressBarHorizontal extends View {
 
     public int getProgress() {
         return (int) progress;
+    }
+
+    public void setProgress(float progress) {
+        this.progress = progress;
+        if (onProgressChangeListener != null) {
+            onProgressChangeListener.onProgressChange((int) progress);
+        }
     }
 
     @Override
@@ -207,6 +160,7 @@ public class DreamProgressBarHorizontal extends View {
         canvas.drawBitmap(progressBitmap, rect, rect, paint);
     }
 
+
     private void drawEndLine(Canvas canvas) {
         if (progressLayerWidth > textWidth + 30 + 40 && progressLayerWidth < getMeasuredWidth() - radius) // 30 is distance between text and left edge, 40 is saving space for end line
         {
@@ -220,8 +174,10 @@ public class DreamProgressBarHorizontal extends View {
         }
     }
 
+
     private void drawProgressText(Canvas canvas) {
-        if (progresText == null || progresText.length() == 0) {
+        if(progresText == null || progresText.length() == 0)
+        {
             return;
         }
 
@@ -240,6 +196,7 @@ public class DreamProgressBarHorizontal extends View {
         canvas.drawText(progresText, x, y, paint);
     }
 
+
     private Path getRoundPath() {
         RectF rect = new RectF(0, 0, getMeasuredWidth(), getMeasuredHeight());
         final float[] arrayRadius = {radius, radius, radius, radius, radius, radius, radius, radius};
@@ -250,12 +207,13 @@ public class DreamProgressBarHorizontal extends View {
         return path;
     }
 
+
     private Bitmap createProgressGradient() {
         LinearGradient gradient = new LinearGradient(0, getMeasuredHeight() / 2,
                 getMeasuredWidth(), getMeasuredHeight() / 2,
-                new int[]{Color.parseColor(gradientStartColor),
-                        Color.parseColor(gradientEndColor)},
-                null, android.graphics.Shader.TileMode.CLAMP);
+                new int[]{Color.parseColor("#FF004790"),
+                        Color.parseColor("#FF0071bc")},
+                null, Shader.TileMode.CLAMP);
         Paint p = new Paint();
         p.setDither(true);
         p.setShader(gradient);
@@ -267,8 +225,10 @@ public class DreamProgressBarHorizontal extends View {
         return bitmap;
     }
 
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+
         switch (event.getAction()) {
             case MotionEvent.ACTION_MOVE:
                 setProgress((maxProgress * event.getX()) / getMeasuredWidth());
@@ -280,6 +240,7 @@ public class DreamProgressBarHorizontal extends View {
         return true;
     }
 
+
     private float dpToPx(int dp) {
         Resources r = getResources();
         return TypedValue.applyDimension(
@@ -288,6 +249,7 @@ public class DreamProgressBarHorizontal extends View {
                 r.getDisplayMetrics()
         );
     }
+
 
     public interface OnProgressChangeListener {
         void onProgressChange(int progress);

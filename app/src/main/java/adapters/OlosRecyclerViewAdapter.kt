@@ -9,10 +9,10 @@ import kotlinx.android.synthetic.main.itemview_dreams.view.*
 import tools.Assistant
 
 
-class RecentRecyclerViewAdapter(
+class OlosRecyclerViewAdapter(
     private val myDataset: ArrayList<String>, var onItemClickListener: OnItemClickListener
 ) :
-    RecyclerView.Adapter<RecentRecyclerViewAdapter.MyViewHolder>() {
+    RecyclerView.Adapter<OlosRecyclerViewAdapter.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val products = LayoutInflater.from(parent.context)
             .inflate(R.layout.itemview_dreams, parent, false) as LinearLayout
