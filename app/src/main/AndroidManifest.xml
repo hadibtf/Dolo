@@ -10,14 +10,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WishDetailActivity"><intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".RankYourOloActivity"></activity>
+        <activity android:name=".PaymentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
-        <activity android:name=".DescribeWishActivity">
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity android:name=".FirstWishActivity" />
+        <activity android:name=".WishDetailActivity"></activity>
+        <activity android:name=".DescribeWishActivity" />
         <activity android:name=".ChoosingOloActivity" />
         <activity android:name=".EnterOloCodeActivity" />
         <activity android:name=".SearchingOloActivity" />
