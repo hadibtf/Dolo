@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -61,82 +60,11 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1.4"
-            android:background="@drawable/blue_shape_left_radius"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight=".8" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/help" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight=".2" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginLeft="2dp"
-                        android:layout_weight="2"
-                        android:autoSizeTextType="uniform"
-                        android:fontFamily="@font/avenir_medium"
-                        android:gravity="center|left"
-                        android:text="help"
-                        android:textColor="@color/white" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight=".2" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1.2" />
-
-        </LinearLayout>
+            android:orientation="vertical" />
 
     </LinearLayout>
 
@@ -161,10 +89,47 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <View
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1.5" />
+                    android:layout_weight="1.5"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".2" />
+                        <TextView
+                            android:autoSizeTextType="uniform"
+                            android:text="describe your wish please..."
+                            android:gravity="center"
+                            android:fontFamily="@font/avenir_medium"
+                            android:textColor="@color/white"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".2" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -177,35 +142,64 @@
                         android:layout_height="match_parent"
                         android:layout_weight=".05" />
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1.5" />
 
-                        <ScrollView
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="8.5"
-                            android:scrollbars="none">
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                            <TextView
-                                android:id="@+id/dreamDescriptionTv"
+                            <View
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/avenir_reg"
-                                android:text="@string/lorem"
-                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                                android:textColor="@color/blackV2" />
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
 
-                        </ScrollView>
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginRight="12dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/letter_sybol" />
 
-                    </LinearLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight=".05" />
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:background="@color/noColor"
+                                android:gravity="top|left"
+                                android:inputType="text" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight=".15" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
 
                     <View
                         android:layout_width="0dp"
@@ -245,7 +239,7 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
+                        android:layout_weight="3"
                         android:orientation="vertical">
 
                         <View
@@ -264,15 +258,41 @@
                                 android:layout_height="0dp"
                                 android:layout_weight="1" />
 
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                android:layout_weight="2"
-                                android:autoSizeTextType="uniform"
-                                android:fontFamily="@font/avenir_demi_bold"
-                                android:gravity="center"
-                                android:text="I want it"
-                                android:textColor="@color/white" />
+                                android:layout_weight="2">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:autoSizeTextType="uniform"
+                                    android:fontFamily="@font/avenir_demi_bold"
+                                    android:gravity="center|right"
+                                    android:text="Ready to wish"
+                                    android:textColor="@color/white" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".2">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/choose_arrow" />
+
+                                </LinearLayout>
+
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".2" />
+
+
+                            </LinearLayout>
 
                             <View
                                 android:layout_width="match_parent"
@@ -291,192 +311,6 @@
 
 
                 </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight=".2" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="2.3">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_weight="1">
-
-                        <com.skyline.widget.layout.RoundCornerLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            app:cornerRadius="40dp">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/girl2" />
-
-                        </com.skyline.widget.layout.RoundCornerLayout>
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1.75"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1.7"
-                            android:orientation="vertical">
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight=".1" />
-
-                            <LinearLayout
-                                android:layout_marginLeft="8dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="1">
-
-                                <TextView
-                                    android:autoSizeTextType="uniform"
-                                    android:fontFamily="@font/avenir_demi_bold"
-                                    android:gravity="center|left"
-                                    android:text="dream\ndescription"
-                                    android:textColor="@color/white"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent" />
-                            </LinearLayout>
-
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight=".1" />
-
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="3" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="7">
-
-                                <LinearLayout
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1">
-
-
-                                    <ImageView
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="1"
-                                        android:scaleType="centerInside"
-                                        android:src="@drawable/rating_gold_star" />
-
-                                    <View
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight=".2" />
-
-                                    <ImageView
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="1"
-                                        android:scaleType="centerInside"
-                                        android:src="@drawable/rating_gold_star" />
-
-                                    <View
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight=".2" />
-
-                                    <ImageView
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="1"
-                                        android:scaleType="centerInside"
-                                        android:src="@drawable/rating_gold_star" />
-
-                                    <View
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight=".2" />
-
-                                    <ImageView
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="1"
-                                        android:scaleType="centerInside"
-                                        android:src="@drawable/rating_gold_star" />
-
-                                    <View
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight=".2" />
-
-                                    <ImageView
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="1"
-                                        android:scaleType="centerInside"
-                                        android:src="@drawable/rating_gold_star" />
-
-                                    <View
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="1" />
-
-                                    <View
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="5" />
-
-                                </LinearLayout>
-                            </LinearLayout>
-
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="8.5" />
 
             </LinearLayout>
 
