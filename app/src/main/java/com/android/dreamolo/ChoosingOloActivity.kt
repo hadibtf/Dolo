@@ -1,6 +1,7 @@
 package com.android.dreamolo
 
 import adapters.OlosRecyclerViewAdapter
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -21,11 +22,11 @@ class ChoosingOloActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
         setContentView(R.layout.activity_choosing_olo)
-
+//        page9.setOnClickListener { startActivity(Intent(this, DescribeWishActivity::class.java)) }
         olosRecyclerViewAdapter =
             OlosRecyclerViewAdapter(ArrayList(), object : OlosRecyclerViewAdapter.OnItemClickListener {
                 override fun onItemClickListener(position: Int, productInfo: String) {
-
+                    startActivity(Intent(applicationContext, WishDetailActivity::class.java))
                 }
             })
 

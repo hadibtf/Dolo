@@ -10,27 +10,41 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RankYourOloActivity"></activity>
-        <activity android:name=".PaymentActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".RankYourOloActivity" />
+
+        <activity android:name=".PaymentActivity" />
+
         <activity android:name=".FirstWishActivity" />
-        <activity android:name=".WishDetailActivity"></activity>
+
+        <activity android:name=".WishDetailActivity" />
+
         <activity android:name=".DescribeWishActivity" />
+
         <activity android:name=".ChoosingOloActivity" />
+
         <activity android:name=".EnterOloCodeActivity" />
+
         <activity android:name=".SearchingOloActivity" />
+
         <activity android:name=".RegistrationActivity" />
+
         <activity android:name=".DreamDescriptionActivity" />
+
         <activity android:name=".SearchResultActivity" />
+
         <activity android:name=".FiltersActivity" />
+
         <activity android:name=".ChooseDreamActivity" />
+
         <activity android:name=".DesignedDeramsOrMakeYourWishActivity" />
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

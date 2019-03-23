@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/page9"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/oilBlue"
@@ -114,7 +115,7 @@
                             android:autoSizeTextType="uniform"
                             android:fontFamily="@font/avenir_medium"
                             android:gravity="left|center"
-                            android:text="register"
+                            android:text="choosing olo"
                             android:textColor="@color/liteBlue" />
 
                     </LinearLayout>

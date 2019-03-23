@@ -1,6 +1,7 @@
 package com.android.dreamolo
 
 import adapters.SingleCategoryRecyclerViewAdapter
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -8,6 +9,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.WindowManager
 import kotlinx.android.synthetic.main.activity_filters.*
+import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.longToast
 import tools.Assistant
 
@@ -25,6 +27,7 @@ class FiltersActivity : AppCompatActivity() {
         )
         setContentView(R.layout.activity_filters)
 
+        page4.setOnClickListener { startActivity(Intent(this, SearchResultActivity::class.java)) }
         val asst = Assistant(this)
 
         singleCategoryRecyclerViewAdapter = SingleCategoryRecyclerViewAdapter(ArrayList(),

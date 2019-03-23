@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/page14"
     android:orientation="vertical"
     tools:context=".RankYourOloActivity">
 
@@ -78,7 +79,7 @@
                     android:autoSizeTextType="uniform"
                     android:fontFamily="@font/avenir_demi_bold"
                     android:gravity="center|left"
-                    android:text="ranl your olo please"
+                    android:text="rank your olo please"
                     android:textColor="@color/blackV2" />
 
             </LinearLayout>

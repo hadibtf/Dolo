@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/page13"
     tools:context=".PaymentActivity">
 
     <View
@@ -186,6 +187,7 @@
                             android:layout_weight="1" />
 
                         <LinearLayout
+                            android:id="@+id/pay_btn"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="10"

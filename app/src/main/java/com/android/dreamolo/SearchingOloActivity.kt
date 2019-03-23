@@ -1,17 +1,16 @@
 package com.android.dreamolo
 
-import android.animation.ObjectAnimator
-import android.support.v7.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.view.WindowManager
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
-import android.view.animation.AnimationUtils
+import android.view.animation.RotateAnimation
 import kotlinx.android.synthetic.main.activity_searching_olo.*
 import tools.Assistant
-import android.view.animation.RotateAnimation
 
 
 class SearchingOloActivity : AppCompatActivity() {
@@ -60,7 +59,7 @@ class SearchingOloActivity : AppCompatActivity() {
             oloCodeLy.visibility = View.GONE
 
         }
-
+        noBt.setOnClickListener { startActivity(Intent(this, ChoosingOloActivity::class.java)) }
         val rotate = RotateAnimation(
             0f, 360f,
             Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,

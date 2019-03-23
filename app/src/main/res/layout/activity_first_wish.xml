@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/page12"
     android:orientation="vertical"
     tools:context=".FirstWishActivity">
 
@@ -175,6 +176,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/check_btn"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -202,6 +204,7 @@
                             android:layout_weight="8">
 
                             <TextView
+                                android:gravity="center"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:autoSizeTextType="uniform"

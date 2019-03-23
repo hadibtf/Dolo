@@ -13,5 +13,7 @@ class DescribeWishActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
         setContentView(R.layout.activity_describe_wish)
+//        page10.setOnClickListener { startActivity(Intent(this, WishDetailActivity::class.java)) }
+
     }
 }

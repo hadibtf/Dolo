@@ -1,8 +1,9 @@
 package com.android.dreamolo
 
 import adapters.RecentRecyclerViewAdapter
-import android.support.v7.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.WindowManager
@@ -22,7 +23,7 @@ class SearchResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_search_result)
 
         searchResultBackBt.setOnClickListener { onBackPressed() }
-
+        page5.setOnClickListener { startActivity(Intent(this, DreamDescriptionActivity::class.java)) }
         searchResultRecyclerViewAdapter =
             RecentRecyclerViewAdapter(ArrayList(), object : RecentRecyclerViewAdapter.OnItemClickListener {
                 override fun onItemClickListener(position: Int, productInfo: String) {
